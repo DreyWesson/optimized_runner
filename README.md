@@ -47,13 +47,14 @@ You are done with your task and would like to take down the container
 ```
 
 # Deleting all dangling containers
-This operation helps free up memory consumed by your inactive containers
+Removes all stopped containers, unused networks, and dangling images on your Docker system. This command is useful for cleaning up your Docker environment by removing unnecessary and unused resources, helping to free up disk space and streamline your Docker setup. However, use it with caution, as it will delete containers and images that are not actively in use.
 ```bash
     make clean -f Makefile.docker
 ```
 # Deleting all dangling and active containers
 
-This operation helps free up memory consumed by your active and inactive containers
+it stops all running containers, removes unused networks, dangling images, and volumes from your Docker system. It's a comprehensive cleanup operation that can help free up disk space and streamline your Docker environment. Be cautious when using scripts like this, especially in a production environment, as it will delete resources that are not actively in use.
+
 ```bash
     make fclean -f Makefile.docker
 ```
